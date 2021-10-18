@@ -37,5 +37,14 @@ fs.readFile('./imiona.txt', 'utf-8', (err, data) => {
     console.log(data)
 })
 
-const names = fs.readFileSync('./imiona.txt')
+
+let names = "";
+try{
+    names = fs.readFileSync('./imiona.txt', 'utf-8')
+    
+}catch(err){
+    //console.log(err)
+    names = "Error names";
+}
+
 console.log(names);
