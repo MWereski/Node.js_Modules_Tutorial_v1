@@ -1,9 +1,12 @@
-const users = require('./users')
+//const users = require('./users')
 const colors = require('colors')
+const mymodule = require('./mymodule')
+//console.log(colors)
 
-users.showUsers();
-users.showUserObj(2);
-console.log((users.userListLength + ' TEST ').underline.bgMagenta)
+mymodule.readModuleName();
+//users.showUsers();
+//users.showUserObj(2);
+//console.log((users.userListLength + ' TEST ').underline.bgMagenta)
 // const counter = require('./counter')
 // console.log('its')
 
