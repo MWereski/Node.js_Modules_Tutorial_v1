@@ -31,20 +31,29 @@ const fs = require('fs');
 // })
 
 // READFILE
-fs.readFile('./imiona.txt', 'utf-8', (err, data) => {
-    if(err) return console.log(err)
+// fs.readFile('./imiona.txt', 'utf-8', (err, data) => {
+//     if(err) return console.log(err)
 
-    console.log(data)
-})
+//     console.log(data)
+// })
 
 
-let names = "";
-try{
-    names = fs.readFileSync('./imiona.txt', 'utf-8')
+// let names = "";
+// try{
+//     names = fs.readFileSync('./imiona.txt', 'utf-8')
     
-}catch(err){
-    //console.log(err)
-    names = "Error names";
-}
+// }catch(err){
+//     //console.log(err)
+//     names = "Error names";
+// }
 
-console.log(names);
+// console.log(names);
+
+// WRITEFILE
+fs.readFile('imiona.txt', 'utf-8', (err, data) => {
+    if(err) console.log(err)
+    else fs.appendFile('użytkownicy.txt', data, (err) => {
+        if(err) console.log(err)
+        else console.log("ZAPISANO!")
+    })
+})
