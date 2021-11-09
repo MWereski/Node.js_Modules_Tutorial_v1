@@ -1,0 +1,1 @@
+console.log("ELO JS Z PLIKU");
